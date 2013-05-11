@@ -159,7 +159,7 @@ function template_settings()
 	$context['theme_settings'] = array(
 		array(
 			'id' => 'customcopyrite',
-			'label' => 'Custom Copyright',
+			'label' => $txt['custcopy'],
 			'type' => 'text',
 		),
 		array(
@@ -182,37 +182,37 @@ function template_settings()
 		),
 		array(
 			'id' => 'box1title',
-			'label' => 'Box 1 title',
+			'label' => $txt['box1title'] ,
 			'type' => 'text',
 		),
 		array(
 			'id' => 'box1',
-			'label' => 'Box 1 text',
+			'label' => $txt['box1body'] ,
 			'type' => 'textarea',
 		),
 		array(
 			'id' => 'box2title',
-			'label' => 'Box 2 title',
+			'label' => $txt['box2title'] ,
 			'type' => 'text',
 		),
 		array(
 			'id' => 'box2',
-			'label' => 'Box 2 text',
+			'label' => $txt['box2body'] ,
 			'type' => 'textarea',
 		),
 		array(
 			'id' => 'box3title',
-			'label' => 'Box 3 title',
+			'label' => $txt['box3title'] ,
 			'type' => 'text',
 		),
 		array(
 			'id' => 'box3',
-			'label' => 'Box 3 text',
+			'label' => $txt['box3body'], 
 			'type' => 'textarea',
 		),
 		array(
 			'id' => 'customside',
-			'label' => 'Show custom texts on the side?',
+			'label' => $txt['customside'],
 		),
 	'',
 		array(
