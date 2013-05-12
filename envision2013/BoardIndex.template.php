@@ -168,7 +168,7 @@ function template_main()
 				// Show some basic information about the number of posts, etc.
 					echo '
 					</td>
-					<td class="lastpost">
+					<td class="lastpost" colspan="2">
 						<span><b>', $board['posts'], '</b> ', $board['is_redirect'] ? $txt['redirects'] : $txt['posts'].' '.$txt['in'].' ' , ' 
 						', $board['is_redirect'] ? '' : '<b>' . $board['topics'].'</b>' , ' ' . $txt['board_topics'], '</span>
 					';
