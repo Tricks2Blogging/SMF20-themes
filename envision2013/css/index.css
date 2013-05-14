@@ -57,7 +57,10 @@
 .horiz_line li{
 	float: left;
 }
-
+menu,nav,article, footer {
+	margin: 0;
+	padding: 0;
+}
 /* Normal, standard links. */
 a:link, a:visited {
 	color: #030;
@@ -2837,7 +2840,7 @@ span.hidelink {
 	background: url(../images/theme/contentbg.png) repeat-x #fff;
 	padding: 10px;
 }
-article{
+#wrappercontent {
 	-webkit-box-shadow:  0px 0px 25px 0px rgba(0, 0, 0, .3);
 	box-shadow:  0px 0px 25px 0px rgba(0, 0, 0, .3); 
 }

@@ -271,11 +271,12 @@ function template_body_above()
 		<div class="bwcell13">';
 
 	echo '
-	<article>
+	<div id="wrapcontent">
 		' , template_menu(), '
 		<div id="mainbox">
 			<div id="contentbox">
-				' , theme_linktree();
+				' , theme_linktree(),'
+				<article>';
 }
 
 function template_body_below()
@@ -283,11 +284,12 @@ function template_body_below()
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 
 	echo '
+				</article>
 			</div>
 		</div>
 		' , template_copyright() ,  '
 		' , template_custom() ,  '
-		<div id="footerarea">
+		<footer id="footerarea">
 			', theme_copyright(), ' | <a href="http://www.bjornhkristiansen.com">Envision2013 theme by Bloc</a>';
 
 	// Show the load time?
@@ -296,8 +298,8 @@ function template_body_below()
 			<br>', $txt['page_created'], $context['load_time'], $txt['seconds_with'], $context['load_queries'], $txt['queries'];
 
 	echo '
-		</div>
-	</article>';
+		</footer>
+	</div>';
 
 	if(!empty($settings['customside']) && (!empty($settings['box1']) || !empty($settings['box2']) || !empty($settings['box3'])))
 		echo 
@@ -327,7 +329,7 @@ function theme_linktree($force_show = false)
 		return;
 
 	echo '
-	<div class="navigate_section">
+	<nav class="navigate_section">
 		<ul>';
 
 	// Each tree item has a URL and name. Some may have extra_before and extra_after.
@@ -354,7 +356,7 @@ function theme_linktree($force_show = false)
 		echo '</li>';
 	}
 	echo '</ul>
-	</div>';
+	</nav>';
 
 	$shown_linktree = true;
 }
@@ -365,7 +367,7 @@ function template_menu()
 	global $context, $settings, $options, $scripturl, $txt;
 
 	echo '
-		<div id="main_menu">
+		<menu id="main_menu">
 			<ul class="dropmenu" id="menu_nav">';
 
 	foreach ($context['menu_buttons'] as $act => $button)
@@ -417,7 +419,7 @@ function template_menu()
 
 	echo '
 			</ul>
-		</div>';
+		</menu>';
 }
 
 // Generate a strip of buttons.
