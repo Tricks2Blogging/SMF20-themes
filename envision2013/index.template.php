@@ -188,7 +188,7 @@ function template_body_above()
 		<div class="bwgrid">
 			<div class="bwcell8">		
 				<h1 class="forumtitle">
-					<a href="', $scripturl, '"><img src="' . $settings['images_url'] . '/theme/logo.png" alt="' . $context['forum_name'] . '" /></a>
+					<a href="', $scripturl, '"><img src="' , !empty($settings['header_logo_url']) ? $settings['header_logo_url'] : $settings['images_url'] . '/theme/logo.png' , '" alt="' . $context['forum_name'] . '" /></a>
 				</h1>
 				<div id="siteslogan">
 				', empty($settings['site_slogan']) ? '' : $settings['site_slogan'], '
